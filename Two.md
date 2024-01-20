@@ -445,6 +445,7 @@ class MyAgent(Role):
     async def print5(self):
         print("5")
 
+    """Print the number 6."""
     async def print6(self):
         print("6")
 
@@ -455,3 +456,4 @@ if __name__ == "__main__":
 
 4、关于这个 Agent 我们还有更多可以思考的地方
 - 目前为止我们设计的所有思考模式都可以总结为是链式的思考（chain of thought），能否利用 MetaGPT 框架实现树结构的思考（tree of thought）图结构的思考（graph of thought）？试着实现让 ai 生成树结构的动作列表，并按照树的遍历方式执行他们，如果你实现，这将是加分项
+
