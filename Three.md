@@ -12,12 +12,17 @@
 
 在案例代码部分的坑太多了，可能是迭代升级了基础架构，但没有升级案例，总之跑了2小时，没通。希望能给一个跑通无误的案例或者说明吧。
 
+_rc 改为rc
+将’_states’ 改为 ‘states’
+类内的成员变量必须显式声明类型，否则会报错。
+
+
 目前卡点问题是：
 
     raise client_error(req.connection_key, exc) from exc
 aiohttp.client_exceptions.ClientProxyConnectionError: Cannot connect to host 127.0.0.1:8118 ssl:default [Connect call failed ('127.0.0.1', 8118)]
 
-
+卡点已解决，是代理的问题。
 
 ----------
 
